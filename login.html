@@ -4,6 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('quiz-background.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .masterContainer {
+            width: 400px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #graphic {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            padding: 20px;
+            border-bottom: 2px solid #ccc;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        #graphic p {
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .boxItems img {
+            width: 60px;
+            margin-bottom: 10px;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .inputs label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .inputs input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .inputs input:focus {
+            border-color: #ff6b81;
+            outline: none;
+            box-shadow: 0px 0px 5px rgba(255, 107, 129, 0.5);
+        }
+
+        #submitButton {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        #submitButton:hover {
+            background: linear-gradient(135deg, #ff6b81, #ff7597);
+        }
+
+        #log-on p {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        #log-on a {
+            color: #ff6b81;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #log-on a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -11,7 +120,7 @@
             <div id="loginbox">
                 <div class="boxArea" id="graphic">
                     <img src="./Graphic designing/flowers.png" alt="" id="graphicImage">
-                    <p>it's good to have you back</p>
+                    <p>It's good to have you back!</p>
                 </div>
                 <div class="boxArea" id="LoginArea">
                     <form id="loginForm">
@@ -22,11 +131,11 @@
                             <p>Welcome User</p>
                         </div>
                         <div class="boxItems inputs">
-                            <label for="username">username</label>       
+                            <label for="username">Username</label>       
                             <input type="text" id="username" required>
                         </div>
                         <div class="boxItems inputs">
-                            <label for="pword">password</label>  
+                            <label for="pword">Password</label>  
                             <input type="password" id="pword" required>
                         </div>
                         <div class="boxItems">                            
